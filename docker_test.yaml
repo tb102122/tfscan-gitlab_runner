@@ -6,18 +6,18 @@ commandTests:
       - -c
       - |
         terraform --version
-    expectedOutput: ["*Terraform v1.*"]
+    expectedOutput: [".*Terraform v1.*"]
   - name: "tfsec Version"
     command: "sh"
     args:
       - -c
       - |
         tfsec --version
-    expectedOutput: ["*v1.*"]
+    expectedOutput: [".*v1.*"]
   - name: "tflint Version"
     command: "sh"
     args:
       - -c
       - |
         tflint --version
-    expectedOutput: ["*TFLint version*"]
+    expectedOutput: [".*TFLint version.*"]
