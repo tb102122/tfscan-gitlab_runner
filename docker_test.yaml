@@ -21,3 +21,10 @@ commandTests:
       - |
         tflint --version
     expectedOutput: [".*TFLint version.*"]
+  - name: "trivy Version"
+    command: "sh"
+    args:
+      - -c
+      - |
+        trivy --version
+    expectedOutput: ["Version:.*Vulnerability DB:.*"]
