@@ -10,6 +10,7 @@ RUN curl -s https://raw.githubusercontent.com/terraform-linters/tflint/master/in
 RUN curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin
 RUN wget https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/junit.tpl
 RUN cp junit.tpl /usr/local/bin/junit.tpl
+RUN chmod +x /usr/local/bin/junit.tpl
 # build layer with Terraform
 FROM registry.gitlab.com/noemix/shared-resources/terraform-images/stable:latest
 COPY --from=builder /usr/local/bin /usr/local/bin
