@@ -7,7 +7,7 @@ RUN curl -s https://raw.githubusercontent.com/aquasecurity/tfsec/master/scripts/
 # install tflint
 RUN curl -s https://raw.githubusercontent.com/terraform-linters/tflint/master/install_linux.sh | bash
 # install trivy to replace tfsec
-RUN curl -sL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | bash 
+RUN curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin
 # build layer with Terraform
 FROM registry.gitlab.com/noemix/shared-resources/terraform-images/stable:latest
 COPY --from=builder /usr/local/bin /usr/local/bin
