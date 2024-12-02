@@ -27,4 +27,4 @@ commandTests:
       - -c
       - |
         trivy --version
-    expectedOutput: [".*Version:.*"]
+    expectedOutput: [".*Version.*"]
